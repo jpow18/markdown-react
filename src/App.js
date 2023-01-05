@@ -18,16 +18,22 @@ function App() {
   );
   return (
     <div className="App">
-      <textarea
-        autoFocus
-        id="editor"
-        value={input}
-        breaks='true'
-        onChange={
-        (e) => setInput(e.target.value)
-      } />
-      <div id="preview" breaks='true'>
+      <div>
+        <header />
+        <textarea
+          autoFocus
+          id="editor"
+          value={input}
+          breaks='true'
+          onChange={
+          (e) => setInput(e.target.value)
+        } />
+      </div>
+      <div>
+        <header />
+        <div id="preview" breaks='true'>
         <ReactMarkdown children={input} />
+        </div>
       </div>
     </div>
   );
